@@ -1,0 +1,17 @@
+.header-container{
+    background-image: url('./../../img/burj.jpg');
+    height: 200px;
+}
+.page-link{
+    display: flex;
+    justify-content: space-around;
+}
+.page-link a {
+    color:white;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 30px;
+}
+.page-link a:hover{
+    color:cornflowerblue;
+}
