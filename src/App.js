@@ -1,19 +1,22 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Home } from './components/Home/Home';
+import Login from './components/Login/Login';
 import { Navbar } from './components/Navbar/Navbar';
+import { Profile } from './components/Profile/Profile';
+import { AuthProvider } from './components/useAuth/auth';
 function App() {
   return (
-    <div>
+    <AuthProvider>
       <Router>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/' element={<Home />} />
-          <Route path='/' element={<Home />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
       </Router>
-    </div>
+    </AuthProvider>
   );
 }
 
